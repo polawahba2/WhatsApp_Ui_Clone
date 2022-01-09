@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whats_app_clone/Screens/Compounent/Constant.dart';
+import 'package:whats_app_clone/Compounent/Constant.dart';
 
 class ChatsScreen extends StatelessWidget {
   const ChatsScreen({Key? key}) : super(key: key);

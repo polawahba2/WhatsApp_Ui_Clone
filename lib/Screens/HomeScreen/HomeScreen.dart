@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whats_app_clone/Compounent/Constant.dart';
 import 'package:whats_app_clone/Screens/CallsScreen/CallsScreen.dart';
 import 'package:whats_app_clone/Screens/ChatsScreen/ChatsScreen.dart';
 import 'package:whats_app_clone/Screens/StatusScreen/StatusScreen.dart';
@@ -13,11 +14,20 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Widget> screensList = [
     Container(),
-    ChatsScreen(),
-    StatusScreen(),
-    CallScreen(),
+    const ChatsScreen(),
+    const StatusScreen(),
+    const CallScreen(),
+  ];
+  List<Icon> floatingActionButtonIcons = const [
+    Icon(Icons.camera_alt),
+    Icon(Icons.message),
+    Icon(Icons.camera_alt),
+    Icon(Icons.add_call),
   ];
   int currentIndex = 0;
+  // final PageController controller = PageController(
+  //   initialPage: 1,
+  // );
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -61,6 +71,21 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         body: screensList[currentIndex],
+        // body: PageView(
+        //   controller: controller,
+        //   children: screensList,
+        //   onPageChanged: (index) {
+        //     setState(() {
+        //       currentIndex = index;
+        //     });
+        //   },
+        // ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: floatingActionButtonIcons[currentIndex],
+          backgroundColor: kDefaultColor,
+          elevation: 0.0,
+        ),
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:whats_app_clone/Screens/Compounent/Constant.dart';
+import 'package:whats_app_clone/Compounent/Constant.dart';
 import 'package:whats_app_clone/Screens/HomeScreen/HomeScreen.dart';
 
 void main() {
@@ -19,6 +19,6 @@ void main() {
         secondary: kDefaultColor,
       ),
     ),
-    home: HomeScreen(),
+    home: const HomeScreen(),
   ));
 }
